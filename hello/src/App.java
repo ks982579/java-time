@@ -1,3 +1,6 @@
+import java.lang.String; // not necessary
+import java.util.List; // This is necessary
+
 public class App {
     public static void main(String[] args) throws Exception {
         /*
@@ -47,5 +50,35 @@ public class App {
         // String
         String mess = "Hi";
         System.out.println(mess);
+
+        Helper.IsItA();
+        // Do not have to instantiate because method is Static
+    }
+}
+
+class Helper {
+    public int publicProp;
+    protected int protectedProp;
+    int defaultProp;
+    private int privateProp;
+
+    public void PropProvider() {
+        /*
+         * Unlike JavaScript, doesn't look like you need `this.` keyword.
+         * referencing members means method is no longer `static`. 
+         */
+        privateProp = 0;
+    }
+
+    public static void IsItA() {
+        List<String> items = List.of("1", "a", "b", "a");
+
+        items.forEach(item -> {
+            if (item.equals("a")) {
+                System.out.println("It is A");
+            } else {
+                System.out.println("I is NOT A");
+            }
+        });
     }
 }
