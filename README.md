@@ -35,3 +35,32 @@ export PATH=$M2_HOME/bin:$PATH
 
 ---
 
+Java has **JShell**, which is the Java _Read-Eval-Print-Loop_ (REPL) app. Start up is simple:
+
+```bash
+jshell
+# or
+jshell -v # for Verbose
+```
+
+Then, the following are command your can type for more information:
+
+```bash
+/help
+/list [<name or id> | -all | -start]
+/edit <name or id>
+/drop <name or id>
+/save [-all | -histroy | -start] <file>
+/exit [<integer-expression-snippet>]
+```
+
+JShell creates "scratch variables" if you explicitly assign a variable name to an output. You can see it in verbose mode. Scratch names have a bash/PHP feel with a `$` prefix. 
+
+Very important and _special_ class is `java.lang.String`. 
+---
+
+It is important to note that the name of your main class in the file, the entry point, must match the name of the file. And that class should have a method called `main()` to run. 
+
+Declare variables starting with their data type. 
+
+Concatenate with the `+` operator. 
