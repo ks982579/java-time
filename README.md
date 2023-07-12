@@ -130,3 +130,41 @@ java --module-path [destination] --module [module name]/[package name]
 ```
 
 The `import` keyword is also very important. 
+
+# Java Syntax
+
+Java borrowed most of its syntax from C++. 
+
+## Package Declaration
+
+Java files start with the package declaration. The name can contain letters and numbers, separated by dots. Each part should match a directory in the path to the type contained in it. If something is declared in this package, it is referenced with the **qualified package name**, like com.sullivansoftware.javastuff... So, when getting a type, it is called the **fully qualified name** of the Java type, because it uses the qualified package name. 
+
+## Import Section
+
+Use the `import` statement. You can also import `static` variables and `static` methods. Static members do not belong to an object of a type, but to the type itself. You can call static methods and variables without instantiating objects or calling the Class (I believe). 
+
+Sometimes you must use a fully qualified name because of a naming collision, when types are named the same. 
+
+You can also `import static java.lang.Math.*;` to import everything at once. 
+
+## Java Grammer 
+
+Java is **case sensitive**. Also, don't use Java keywords as other names. The curly brackets are **block delimiters**. The semicolon is a **line terminator**. 
+
+## Java Identifiers and Variables
+
+An **identifier** is the name you give an item in Java. And _item_ refers to a class, variable, method, etc... There are some Java coding conventions:
++ identifier cannot be a reserved word
+    + In Java 9, the `_` all alone because a reserved word
++ identifiers can be made of letters, numbers, underscore, and dollar sign
++ idenifier cannot begin with a number
++ suggested casing is `camelCase`. Unless class name, then use `PascalCase`
+
+A **variable** has a type and a value, or maybe values. Java has 3 types of variables:
+1. **fields**: (aka properties) defined in class bodies, but outside methods. They are not `static`.
+2. **local variables**: declared within method bodies, only relevant in that context.
+3. **static variables**: declared in class bodies with keyword `static`. 
+
+## Java Comments
+
+p. 124
