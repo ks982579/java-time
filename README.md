@@ -129,6 +129,12 @@ Then, to run:
 java --module-path [destination] --module [module name]/[package name]
 ```
 
+Or more simply for running a class...
+
+```java
+java -cp bin App
+```
+
 The `import` keyword is also very important. 
 
 # Java Syntax
@@ -167,4 +173,26 @@ A **variable** has a type and a value, or maybe values. Java has 3 types of vari
 
 ## Java Comments
 
-p. 124
+There are 3 types of comments:
++ **Single Line Comments**: written as `//`
+    + Good for `// TODO: XYZ`, or used within a team
++ **Multiline comments**: written as `/* ... */`
++ **JavaDoc Comments**: written as `/** ... */`
+    + These are exported into documentation of a project called JavaDoc API with special tools. 
+
+## Java Types
+
+Simply put, a **class** is a template for creating objects. We **instantiate** a class to create an object. That is, an object is an instance of a class. 
+An object implicitly extends class `java.lang.Object` if no other superclass is declared. You could write
+
+```java
+package dev.sullivansoftware.example;
+
+public class Sample extends Object {
+    ...
+}
+```
+
+Yes, quick introduction to the `extends` keyword as well. Additionally, note that the `java.lang` package is implicitly imported. 
+
+**Fields**, or **properties**, are like variables defined within a class and for that class. 
