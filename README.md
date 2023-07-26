@@ -202,3 +202,9 @@ You cannot have multiple `public class` classes in one file. But you can create 
 A `constructor` method is automatically generated to setup the class. By default, it just calles `super()`, which invokes `Object` without arguments. As such, any fields in the class schema that are not defined are given default values, typically 0 or `null`. 
 
 Using the `static` keyword can make class variables. These are associated with the class and therefore the same across all instances. Use the `final` keyword as well to make the value immutable, aka a **constant**. 
+
+If it is not constant, maybe a class count, changing the property value on one instance updates that value on all of them. This is because the value reference back to the class. Think like a memory location. 
+
+## Encapsulating Data
+
+p. 130 / 142
