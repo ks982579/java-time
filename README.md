@@ -196,3 +196,9 @@ public class Sample extends Object {
 Yes, quick introduction to the `extends` keyword as well. Additionally, note that the `java.lang` package is implicitly imported. 
 
 **Fields**, or **properties**, are like variables defined within a class and for that class. 
+
+You cannot have multiple `public class` classes in one file. But you can create other classes within a "*.java" file, just leave off the `public` keyword. Then, in the `main()` method, you can instantiate that object with the `new` keyword. 
+
+A `constructor` method is automatically generated to setup the class. By default, it just calles `super()`, which invokes `Object` without arguments. As such, any fields in the class schema that are not defined are given default values, typically 0 or `null`. 
+
+Using the `static` keyword can make class variables. These are associated with the class and therefore the same across all instances. Use the `final` keyword as well to make the value immutable, aka a **constant**. 
